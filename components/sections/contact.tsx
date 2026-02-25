@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Send, Mail, MapPin, Phone } from "lucide-react"
+import { Send, Mail, MapPin, Phone, Linkedin, Github } from "lucide-react"
 import SectionTitle from "@/components/ui-custom/section-title"
 
 export default function Contact() {
@@ -71,7 +71,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-muted-foreground">contact@example.com</p>
+                  <p className="text-muted-foreground">bernard.houngbo@epitech.eu</p>
                 </div>
               </div>
 
@@ -81,7 +81,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Localisation</h4>
-                  <p className="text-muted-foreground">Paris, France</p>
+                  <p className="text-muted-foreground">Cotonou, Benin</p>
                 </div>
               </div>
 
@@ -91,7 +91,31 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Téléphone</h4>
-                  <p className="text-muted-foreground">+33 6 XX XX XX XX</p>
+                  <p className="text-muted-foreground">+229 0198705024</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-medium">LinkedIn</h4>
+                  <a href="https://www.linkedin.com/in/bernard-houngbo" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    linkedin.com/in/bernard-houngbo
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Github className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-medium">GitHub</h4>
+                  <a href="https://github.com/kalben22" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    github.com/kalben22
+                  </a>
                 </div>
               </div>
             </div>

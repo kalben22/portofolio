@@ -4,76 +4,96 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Network, Server, Shield, Zap, Database, Cloud, HardDrive, Lock, FileText } from "lucide-react"
+import { Network, Server, Shield, Zap, Database, Cloud, Search, Lock, FileText, Eye, Bug, AlertTriangle, Monitor, HardDrive, Terminal } from "lucide-react"
 import SectionTitle from "@/components/ui-custom/section-title"
 import SkillCard from "@/components/cards/skill-card"
 
 // Données des compétences
 const skillsData = {
-  network: [
+  dfir: [
     {
-      title: "Infrastructure Réseau",
-      description: "Configuration et maintenance des équipements réseau (routeurs, switches, firewalls)",
-      icon: <Network className="h-10 w-10" />,
-      skills: ["Cisco", "Juniper", "Fortinet", "Palo Alto", "VLANs", "Routing & Switching"],
+      title: "Digital Forensics",
+      description: "Analyse forensique numérique et collecte de preuves",
+      icon: <Search className="h-10 w-10" />,
+      skills: ["Autopsy", "Volatility", "FTK Imager", "KAPE", "Disk Forensics", "Memory Forensics"],
     },
     {
-      title: "Protocoles Réseau",
-      description: "Maîtrise des protocoles réseau et de leur implémentation",
-      icon: <Zap className="h-10 w-10" />,
-      skills: ["TCP/IP", "DNS", "DHCP", "VPN", "BGP", "OSPF"],
+      title: "Incident Response",
+      description: "Détection, confinement et remédiation des incidents de sécurité",
+      icon: <AlertTriangle className="h-10 w-10" />,
+      skills: ["TheHive", "MITRE ATT&CK", "Playbooks", "Containment", "Eradication", "Recovery"],
     },
     {
-      title: "Monitoring & Troubleshooting",
-      description: "Surveillance et résolution des problèmes réseau",
-      icon: <Database className="h-10 w-10" />,
-      skills: ["Wireshark", "Nagios", "PRTG", "Zabbix", "Netflow", "Syslog"],
+      title: "Threat Detection & Monitoring",
+      description: "Surveillance proactive et détection des menaces avancées",
+      icon: <Eye className="h-10 w-10" />,
+      skills: ["Wazuh", "OpenSearch", "SIEM", "EDR", "Log Analysis", "Threat Hunting"],
     },
   ],
-  system: [
+  network: [
     {
-      title: "Administration Système",
-      description: "Gestion et maintenance des systèmes d'exploitation",
-      icon: <Server className="h-10 w-10" />,
-      skills: ["Windows Server", "Linux (Debian/Ubuntu/RHEL)", "Active Directory", "PowerShell", "Bash"],
+      title: "Sécurité Réseau",
+      description: "Protection et sécurisation des infrastructures réseau",
+      icon: <Shield className="h-10 w-10" />,
+      skills: ["Firewalls", "IDS/IPS", "VPN", "OPNSense", "Segmentation", "DMZ"],
     },
     {
-      title: "Virtualisation & Cloud",
-      description: "Déploiement et gestion d'environnements virtualisés et cloud",
-      icon: <Cloud className="h-10 w-10" />,
-      skills: ["VMware", "Hyper-V", "AWS", "Azure", "Docker", "Kubernetes"],
+      title: "Infrastructure Réseau",
+      description: "Conception et administration des réseaux d'entreprise",
+      icon: <Network className="h-10 w-10" />,
+      skills: ["OSPF", "AAA", "DNS", "DHCP", "SSH", "VLANs"],
     },
     {
-      title: "Stockage & Sauvegarde",
-      description: "Solutions de stockage et stratégies de sauvegarde",
-      icon: <HardDrive className="h-10 w-10" />,
-      skills: ["SAN/NAS", "Veeam", "Backup Exec", "DFS", "RAID", "Disaster Recovery"],
+      title: "Protocoles & Monitoring",
+      description: "Analyse réseau et surveillance du trafic",
+      icon: <Zap className="h-10 w-10" />,
+      skills: ["TCP/IP", "Wireshark", "Netflow", "Syslog", "Suricata", "Zeek"],
     },
   ],
   security: [
     {
-      title: "Sécurité Réseau",
-      description: "Protection de l'infrastructure réseau contre les menaces",
-      icon: <Shield className="h-10 w-10" />,
-      skills: ["Firewalls", "IDS/IPS", "WAF", "Zero Trust", "Segmentation", "DMZ"],
-    },
-    {
-      title: "Sécurité des Systèmes",
-      description: "Sécurisation des systèmes d'exploitation et applications",
+      title: "Blue Team Operations",
+      description: "Défense proactive et opérations de sécurité SOC",
       icon: <Lock className="h-10 w-10" />,
-      skills: ["Hardening", "Patch Management", "Antivirus", "EDR", "Privilege Management"],
+      skills: ["SOC Analysis", "Alert Triage", "Malware Analysis", "Threat Intelligence", "YARA Rules"],
     },
     {
-      title: "Gouvernance & Conformité",
-      description: "Mise en place de politiques de sécurité et conformité",
-      icon: <FileText className="h-10 w-10" />,
-      skills: ["ISO 27001", "GDPR", "PCI DSS", "Audit de sécurité", "Gestion des risques"],
+      title: "Penetration Testing",
+      description: "Tests de pénétration et évaluation des vulnérabilités",
+      icon: <Bug className="h-10 w-10" />,
+      skills: ["Nmap", "Burp Suite", "Metasploit", "OWASP Top 10", "Vulnerability Assessment"],
+    },
+    {
+      title: "Outils & Frameworks",
+      description: "Cadres de référence et standards en cybersécurité",
+      icon: <Database className="h-10 w-10" />,
+      skills: ["NIST", "MITRE ATT&CK", "CyberKillChain", "ISO 27001", "Incident Handling"],
+    },
+  ],
+  sysadmin: [
+    {
+      title: "Administration Système",
+      description: "Gestion et maintenance des systèmes d'exploitation serveur",
+      icon: <Server className="h-10 w-10" />,
+      skills: ["Linux (Debian/Ubuntu)", "Windows Server", "Active Directory", "GPO", "PowerShell", "Bash"],
+    },
+    {
+      title: "Virtualisation & Services",
+      description: "Déploiement et gestion d'environnements virtualisés et services IT",
+      icon: <Monitor className="h-10 w-10" />,
+      skills: ["VMware", "VirtualBox", "Docker", "Proxmox", "File Sharing", "Domain Controller"],
+    },
+    {
+      title: "Automatisation & Scripting",
+      description: "Automatisation des tâches d'administration et scripting",
+      icon: <Terminal className="h-10 w-10" />,
+      skills: ["Python", "Bash Scripting", "PowerShell", "Ansible", "Cron Jobs", "Git"],
     },
   ],
 }
 
 export default function Skills() {
-  const [activeTab, setActiveTab] = useState("network")
+  const [activeTab, setActiveTab] = useState("dfir")
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -85,7 +105,7 @@ export default function Skills() {
       <div className="container px-4 md:px-6 relative z-10">
         <SectionTitle
           title="Compétences"
-          subtitle="Mes domaines d'expertise en administration réseau, système et sécurité"
+          subtitle="Mes domaines d'expertise en cybersécurité, DFIR et sécurité réseau"
           inView={inView}
         />
 
@@ -95,33 +115,56 @@ export default function Skills() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-12"
         >
-          <Tabs defaultValue="network" className="w-full" onValueChange={setActiveTab}>
-            <TabsList className="grid w-full grid-cols-3 mb-8">
+          <Tabs defaultValue="dfir" className="w-full" onValueChange={setActiveTab}>
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
+              <TabsTrigger
+                value="dfir"
+                className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                <Search className="h-4 w-4" />
+                <span>DFIR</span>
+              </TabsTrigger>
               <TabsTrigger
                 value="network"
                 className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
                 <Network className="h-4 w-4" />
-                <span>Réseau</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="system"
-                className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-              >
-                <Server className="h-4 w-4" />
-                <span>Système</span>
+                <span>Network Security</span>
               </TabsTrigger>
               <TabsTrigger
                 value="security"
                 className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
                 <Shield className="h-4 w-4" />
-                <span>Sécurité</span>
+                <span>Blue Team</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="sysadmin"
+                className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                <Server className="h-4 w-4" />
+                <span>SysAdmin</span>
               </TabsTrigger>
             </TabsList>
 
             <div className="relative">
               <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-primary/20 to-primary/10 opacity-70 blur-sm"></div>
+
+              <TabsContent value="dfir" className="mt-0 relative">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {skillsData.dfir.map((skill, index) => (
+                    <SkillCard
+                      key={index}
+                      title={skill.title}
+                      description={skill.description}
+                      icon={skill.icon}
+                      skills={skill.skills}
+                      index={index}
+                      isActive={activeTab === "dfir"}
+                    />
+                  ))}
+                </div>
+              </TabsContent>
 
               <TabsContent value="network" className="mt-0 relative">
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -139,22 +182,6 @@ export default function Skills() {
                 </div>
               </TabsContent>
 
-              <TabsContent value="system" className="mt-0 relative">
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {skillsData.system.map((skill, index) => (
-                    <SkillCard
-                      key={index}
-                      title={skill.title}
-                      description={skill.description}
-                      icon={skill.icon}
-                      skills={skill.skills}
-                      index={index}
-                      isActive={activeTab === "system"}
-                    />
-                  ))}
-                </div>
-              </TabsContent>
-
               <TabsContent value="security" className="mt-0 relative">
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {skillsData.security.map((skill, index) => (
@@ -166,6 +193,22 @@ export default function Skills() {
                       skills={skill.skills}
                       index={index}
                       isActive={activeTab === "security"}
+                    />
+                  ))}
+                </div>
+              </TabsContent>
+
+              <TabsContent value="sysadmin" className="mt-0 relative">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {skillsData.sysadmin.map((skill, index) => (
+                    <SkillCard
+                      key={index}
+                      title={skill.title}
+                      description={skill.description}
+                      icon={skill.icon}
+                      skills={skill.skills}
+                      index={index}
+                      isActive={activeTab === "sysadmin"}
                     />
                   ))}
                 </div>

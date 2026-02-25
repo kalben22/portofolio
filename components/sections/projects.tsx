@@ -7,44 +7,32 @@ import ProjectCard from "@/components/cards/project-card"
 
 const projects = [
   {
-    title: "Migration Infrastructure Cloud",
+    title: "Security Operations Center (SOC) Lab",
     description:
-      "Migration de l'infrastructure on-premise vers AWS avec mise en place d'une architecture sécurisée et hautement disponible.",
-    tags: ["AWS", "VPC", "Security Groups", "IAM", "Load Balancing"],
-    image: "/placeholder.svg?height=300&width=400",
+      "Mise en place d'un SOC complet avec Wazuh pour la détection endpoint, OpenSearch pour l'agrégation de logs en temps réel, et TheHive pour la gestion des incidents et l'exécution automatisée de playbooks.",
+    tags: ["Wazuh", "OpenSearch", "TheHive", "SIEM", "Detection Rules", "Automated Playbooks"],
+    image: "/images/project-soc-lab.jpg",
   },
   {
-    title: "Refonte Sécurité Réseau",
+    title: "Architecture Réseau Cyber-Café",
     description:
-      "Implémentation d'une nouvelle architecture de sécurité réseau basée sur le principe de défense en profondeur.",
-    tags: ["Palo Alto", "Segmentation", "IDS/IPS", "VPN", "Zero Trust"],
-    image: "/placeholder.svg?height=300&width=400",
+      "Conception et implémentation d'une architecture réseau sécurisée avec routage dynamique OSPF, services AAA, DNS, DHCP et gestion des accès SSH.",
+    tags: ["OSPF", "AAA", "DNS", "DHCP", "SSH", "Network Security"],
+    image: "/images/project-network-arch.jpg",
   },
   {
-    title: "Déploiement Active Directory",
+    title: "Plateforme All-in-One d'outils DFIR",
     description:
-      "Conception et déploiement d'une infrastructure Active Directory multi-sites avec réplication et haute disponibilité.",
-    tags: ["Windows Server", "AD DS", "GPO", "FSMO", "Site Replication"],
-    image: "/placeholder.svg?height=300&width=400",
+      "Développement d'une plateforme centralisant les outils de Digital Forensics & Incident Response pour faciliter les investigations numériques et la réponse aux incidents.",
+    tags: ["DFIR", "Forensics", "Incident Response", "Python", "Automation", "Analysis Tools"],
+    image: "/images/project-dfir-platform.jpg",
   },
   {
-    title: "Mise en place SOC",
-    description: "Implémentation d'un centre opérationnel de sécurité pour la détection et la réponse aux incidents.",
-    tags: ["SIEM", "EDR", "Threat Intelligence", "Incident Response"],
-    image: "/placeholder.svg?height=300&width=400",
-  },
-  {
-    title: "Virtualisation Infrastructure",
+    title: "Landing Page - Association",
     description:
-      "Virtualisation complète de l'infrastructure serveur avec mise en place d'une solution de reprise d'activité.",
-    tags: ["VMware", "vSphere", "vSAN", "DRS", "HA", "Backup"],
-    image: "/placeholder.svg?height=300&width=400",
-  },
-  {
-    title: "Automatisation IT",
-    description: "Développement de scripts et outils pour automatiser les tâches d'administration système et réseau.",
-    tags: ["PowerShell", "Python", "Ansible", "API", "CI/CD"],
-    image: "/placeholder.svg?height=300&width=400",
+      "Création d'une landing page moderne et responsive pour une association, avec un design épuré, des sections d'information, et des appels à l'action engageants.",
+    tags: ["Next.js", "Tailwind CSS", "Responsive Design", "UI/UX", "Web Development"],
+    image: "/images/project-landing-page.jpg",
   },
 ]
 

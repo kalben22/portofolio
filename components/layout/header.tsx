@@ -38,8 +38,8 @@ export default function Header() {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="font-bold text-xl flex items-center gap-2">
-          <span className="text-primary">Cyber</span>
-          <span>Portfolio</span>
+          <span className="text-primary">Bernard</span>
+          <span>Houngbo</span>
         </Link>
 
         <nav className="hidden md:flex gap-6">
