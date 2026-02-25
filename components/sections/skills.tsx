@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Network, Server, Shield, Zap, Database, Cloud, Search, Lock, FileText, Eye, Bug, AlertTriangle } from "lucide-react"
+import { Network, Server, Shield, Zap, Database, Cloud, Search, Lock, FileText, Eye, Bug, AlertTriangle, Monitor, HardDrive, Terminal } from "lucide-react"
 import SectionTitle from "@/components/ui-custom/section-title"
 import SkillCard from "@/components/cards/skill-card"
 
@@ -58,16 +58,36 @@ const skillsData = {
       skills: ["SOC Analysis", "Alert Triage", "Malware Analysis", "Threat Intelligence", "YARA Rules"],
     },
     {
-      title: "Administration & Hardening",
-      description: "Sécurisation des systèmes et gestion des accès",
-      icon: <Server className="h-10 w-10" />,
-      skills: ["Linux", "Windows Server", "Active Directory", "Access Management", "Hardening"],
+      title: "Penetration Testing",
+      description: "Tests de pénétration et évaluation des vulnérabilités",
+      icon: <Bug className="h-10 w-10" />,
+      skills: ["Nmap", "Burp Suite", "Metasploit", "OWASP Top 10", "Vulnerability Assessment"],
     },
     {
       title: "Outils & Frameworks",
-      description: "Maîtrise des outils et cadres de référence en cybersécurité",
+      description: "Cadres de référence et standards en cybersécurité",
       icon: <Database className="h-10 w-10" />,
-      skills: ["NIST", "MITRE ATT&CK", "CyberKillChain", "OWASP", "Penetration Testing"],
+      skills: ["NIST", "MITRE ATT&CK", "CyberKillChain", "ISO 27001", "Incident Handling"],
+    },
+  ],
+  sysadmin: [
+    {
+      title: "Administration Système",
+      description: "Gestion et maintenance des systèmes d'exploitation serveur",
+      icon: <Server className="h-10 w-10" />,
+      skills: ["Linux (Debian/Ubuntu)", "Windows Server", "Active Directory", "GPO", "PowerShell", "Bash"],
+    },
+    {
+      title: "Virtualisation & Services",
+      description: "Déploiement et gestion d'environnements virtualisés et services IT",
+      icon: <Monitor className="h-10 w-10" />,
+      skills: ["VMware", "VirtualBox", "Docker", "Proxmox", "File Sharing", "Domain Controller"],
+    },
+    {
+      title: "Automatisation & Scripting",
+      description: "Automatisation des tâches d'administration et scripting",
+      icon: <Terminal className="h-10 w-10" />,
+      skills: ["Python", "Bash Scripting", "PowerShell", "Ansible", "Cron Jobs", "Git"],
     },
   ],
 }
@@ -96,7 +116,7 @@ export default function Skills() {
           className="mt-12"
         >
           <Tabs defaultValue="dfir" className="w-full" onValueChange={setActiveTab}>
-            <TabsList className="grid w-full grid-cols-3 mb-8">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
               <TabsTrigger
                 value="dfir"
                 className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
@@ -117,6 +137,13 @@ export default function Skills() {
               >
                 <Shield className="h-4 w-4" />
                 <span>Blue Team</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="sysadmin"
+                className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              >
+                <Server className="h-4 w-4" />
+                <span>SysAdmin</span>
               </TabsTrigger>
             </TabsList>
 
@@ -166,6 +193,22 @@ export default function Skills() {
                       skills={skill.skills}
                       index={index}
                       isActive={activeTab === "security"}
+                    />
+                  ))}
+                </div>
+              </TabsContent>
+
+              <TabsContent value="sysadmin" className="mt-0 relative">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {skillsData.sysadmin.map((skill, index) => (
+                    <SkillCard
+                      key={index}
+                      title={skill.title}
+                      description={skill.description}
+                      icon={skill.icon}
+                      skills={skill.skills}
+                      index={index}
+                      isActive={activeTab === "sysadmin"}
                     />
                   ))}
                 </div>

@@ -17,7 +17,7 @@ export default function Footer() {
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
           </Link>
-          <Link href="mailto:bernardhoungbo2021@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+          <Link href="mailto:bernard.houngbo@epitech.eu" className="text-muted-foreground hover:text-primary transition-colors">
             <Mail className="h-5 w-5" />
             <span className="sr-only">Email</span>
           </Link>

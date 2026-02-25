@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { FileText, Mail, Github, Linkedin, ArrowDown } from "lucide-react"
+import { FileText, Mail, Github, Linkedin, ArrowDown, Download } from "lucide-react"
 import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import { useInView } from "react-intersection-observer"
@@ -52,6 +52,8 @@ export default function Hero() {
                     1000,
                     "Network Security Expert",
                     1000,
+                    "Network & System Administrator",
+                    1000,
                   ]}
                   wrapper="span"
                   speed={50}
@@ -60,7 +62,7 @@ export default function Hero() {
               </motion.h1>
 
               <motion.p
-                className="max-w-[600px] text-muted-foreground md:text-xl"
+                className="max-w-[600px] text-muted-foreground md:text-xl text-justify"
                 initial={{ opacity: 0 }}
                 animate={inView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.6, duration: 0.5 }}
@@ -75,14 +77,18 @@ export default function Hero() {
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              <Button className="gap-2 group">
-                <Mail className="h-4 w-4 group-hover:animate-bounce" />
-                Me contacter
-              </Button>
-              <Button variant="outline" className="gap-2">
-                <FileText className="h-4 w-4" />
-                Voir mon CV
-              </Button>
+              <Link href="mailto:bernard.houngbo@epitech.eu">
+                <Button className="gap-2 group">
+                  <Mail className="h-4 w-4 group-hover:animate-bounce" />
+                  Me contacter
+                </Button>
+              </Link>
+              <Link href="/cv-bernard-houngbo.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="gap-2">
+                  <Download className="h-4 w-4" />
+                  {"Télécharger mon CV"}
+                </Button>
+              </Link>
             </motion.div>
 
             <motion.div
@@ -112,11 +118,12 @@ export default function Hero() {
               <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary to-primary/50 opacity-75 blur-sm animate-pulse"></div>
               <div className="relative overflow-hidden rounded-full border-4 border-background">
                 <Image
-                  alt="Profile"
+                  alt="Bernard Houngbo - Cybersecurity Analyst"
                   className="aspect-square object-cover"
                   height="400"
                   width="400"
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/images/bernard-houngbo.jpg"
+                  priority
                 />
               </div>
               <div className="absolute -z-10 inset-0 bg-grid-small-pattern opacity-10 rounded-full"></div>

@@ -36,11 +36,20 @@ export default function Certifications() {
             <div className="space-y-4">
               <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-muted/30">
-                  <CardTitle>Master of Cybersecurity</CardTitle>
-                  <CardDescription>Epitech Benin, 2024 - 2026</CardDescription>
+                  <CardTitle>{"Master's degree, Cybersecurity"}</CardTitle>
+                  <CardDescription>{"Epitech - L'école de l'excellence informatique, Août 2024 - 2026"}</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-4">
-                  <p>{"Spécialisation en cybersécurité, forensique numérique et sécurité des systèmes d'information"}</p>
+                  <p>{"Architecture des systèmes, Communication, Cybersécurité, Forensique numérique et sécurité des systèmes d'information"}</p>
+                </CardContent>
+              </Card>
+              <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+                <CardHeader className="bg-muted/30">
+                  <CardTitle>{"Université numérique Cheikh Hamidou KANE (UN-CHK)"}</CardTitle>
+                  <CardDescription>2023 - 2024</CardDescription>
+                </CardHeader>
+                <CardContent className="pt-4">
+                  <p>{"Formation en technologies numériques et systèmes d'information"}</p>
                 </CardContent>
               </Card>
               <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
@@ -67,22 +76,24 @@ export default function Certifications() {
             <div className="space-y-4">
               <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-muted/30">
-                  <CardTitle>Certifications Cybersécurité</CardTitle>
+                  <CardTitle>{"Certifications Cybersécurité & Blue Team"}</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-4 flex flex-wrap gap-2">
                   <Badge className="bg-primary/20 text-primary hover:bg-primary/30">BTJA (Blue Team Junior Analyst)</Badge>
                   <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CNSP (Certified Network Security Practitioner)</Badge>
                   <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CBTP (Certified Blue Team Practitioner)</Badge>
+                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CRTA (Certified Red Team Analyst)</Badge>
                 </CardContent>
               </Card>
               <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-muted/30">
-                  <CardTitle>Certifications Réseau</CardTitle>
+                  <CardTitle>Certifications Cisco</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-4 flex flex-wrap gap-2">
                   <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CCNA 1 : Introduction to Networks</Badge>
                   <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CCNA 2 : Switching, Routing and Wireless Essentials</Badge>
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">Support and Network Security</Badge>
+                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">{"Support et Sécurité des réseaux"}</Badge>
+                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">Introduction to Cybersecurity</Badge>
                 </CardContent>
               </Card>
               <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">

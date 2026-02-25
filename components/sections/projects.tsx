@@ -11,21 +11,28 @@ const projects = [
     description:
       "Mise en place d'un SOC complet avec Wazuh pour la détection endpoint, OpenSearch pour l'agrégation de logs en temps réel, et TheHive pour la gestion des incidents et l'exécution automatisée de playbooks.",
     tags: ["Wazuh", "OpenSearch", "TheHive", "SIEM", "Detection Rules", "Automated Playbooks"],
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/images/project-soc-lab.jpg",
   },
   {
     title: "Architecture Réseau Cyber-Café",
     description:
       "Conception et implémentation d'une architecture réseau sécurisée avec routage dynamique OSPF, services AAA, DNS, DHCP et gestion des accès SSH.",
     tags: ["OSPF", "AAA", "DNS", "DHCP", "SSH", "Network Security"],
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/images/project-network-arch.jpg",
   },
   {
     title: "Plateforme All-in-One d'outils DFIR",
     description:
       "Développement d'une plateforme centralisant les outils de Digital Forensics & Incident Response pour faciliter les investigations numériques et la réponse aux incidents.",
     tags: ["DFIR", "Forensics", "Incident Response", "Python", "Automation", "Analysis Tools"],
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/images/project-dfir-platform.jpg",
+  },
+  {
+    title: "Landing Page - Association",
+    description:
+      "Création d'une landing page moderne et responsive pour une association, avec un design épuré, des sections d'information, et des appels à l'action engageants.",
+    tags: ["Next.js", "Tailwind CSS", "Responsive Design", "UI/UX", "Web Development"],
+    image: "/images/project-landing-page.jpg",
   },
 ]
 

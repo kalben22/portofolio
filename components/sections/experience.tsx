@@ -7,9 +7,24 @@ import ExperienceCard from "@/components/cards/experience-card"
 
 const experiences = [
   {
+    title: "Analyste Cybersécurité",
+    company: "ClikForm",
+    period: "Oct. 2025 - Présent",
+    description:
+      "Assurer la sécurité du code et des applications tout au long du cycle de développement jusqu'au déploiement en production.",
+    responsibilities: [
+      "Revue de code sécurisée et détection de vulnérabilités (SAST/DAST)",
+      "Intégration de la sécurité dans le pipeline CI/CD (DevSecOps)",
+      "Analyse des risques et évaluation des menaces sur les applications",
+      "Mise en place de bonnes pratiques de sécurité pour les développeurs",
+      "Tests de pénétration applicatifs et remédiation des vulnérabilités",
+      "Veille sur les nouvelles vulnérabilités et menaces (CVE, OWASP Top 10)",
+    ],
+  },
+  {
     title: "IT Support Specialist",
-    company: "African Education Innovation Group",
-    period: "2024 - Août 2025",
+    company: "African Education & Innovation Group (AEIG)",
+    period: "Oct. 2024 - Présent",
     description:
       "Support technique et gestion de l'infrastructure IT pour plus de 200 utilisateurs dans un environnement éducatif.",
     responsibilities: [
