@@ -122,7 +122,7 @@ export default function Hero() {
                   className="aspect-square object-cover"
                   height="400"
                   width="400"
-                  src="/images/bernard-houngbo.jpg"
+                  src="/images/bernard-avatar.jpg"
                   priority
                 />
               </div>
