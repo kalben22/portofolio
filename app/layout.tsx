@@ -5,9 +5,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Portfolio Administrateur Réseau, Système et Sécurité",
-  description: "Portfolio professionnel d'un administrateur réseau, système et expert en cybersécurité",
-    generator: 'v0.dev'
+  title: "Bernard Houngbo - Cybersecurity Analyst | DFIR | Network Security",
+  description: "Portfolio de Bernard Houngbo - Analyste en cybersécurité spécialisé en Digital Forensics & Incident Response (DFIR) et sécurité réseau, basé à Cotonou, Benin.",
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({ children }) {

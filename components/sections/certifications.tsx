@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { GraduationCap, Award } from "lucide-react"
+import { GraduationCap, Award, Clock } from "lucide-react"
 import SectionTitle from "@/components/ui-custom/section-title"
 
 export default function Certifications() {
@@ -36,20 +36,20 @@ export default function Certifications() {
             <div className="space-y-4">
               <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-muted/30">
-                  <CardTitle>Master en Sécurité des Systèmes d'Information</CardTitle>
-                  <CardDescription>Université XYZ, 2015</CardDescription>
+                  <CardTitle>Master of Cybersecurity</CardTitle>
+                  <CardDescription>Epitech Benin, 2024 - 2026</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-4">
-                  <p>Spécialisation en sécurité réseau et gestion des infrastructures IT</p>
+                  <p>{"Spécialisation en cybersécurité, forensique numérique et sécurité des systèmes d'information"}</p>
                 </CardContent>
               </Card>
               <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-muted/30">
-                  <CardTitle>Licence en Informatique</CardTitle>
-                  <CardDescription>Université ABC, 2013</CardDescription>
+                  <CardTitle>{"Licence en Systèmes d'Information de Gestion"}</CardTitle>
+                  <CardDescription>IUT-Parakou, 2021 - 2024</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-4">
-                  <p>Option réseaux et télécommunications</p>
+                  <p>{"Gestion des systèmes d'information et technologies de l'information"}</p>
                 </CardContent>
               </Card>
             </div>
@@ -67,32 +67,33 @@ export default function Certifications() {
             <div className="space-y-4">
               <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-muted/30">
+                  <CardTitle>Certifications Cybersécurité</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4 flex flex-wrap gap-2">
+                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">BTJA (Blue Team Junior Analyst)</Badge>
+                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CNSP (Certified Network Security Practitioner)</Badge>
+                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CBTP (Certified Blue Team Practitioner)</Badge>
+                </CardContent>
+              </Card>
+              <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+                <CardHeader className="bg-muted/30">
                   <CardTitle>Certifications Réseau</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-4 flex flex-wrap gap-2">
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">Cisco CCNP</Badge>
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">Cisco CCNA</Badge>
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">Juniper JNCIA</Badge>
+                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CCNA 1 : Introduction to Networks</Badge>
+                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CCNA 2 : Switching, Routing and Wireless Essentials</Badge>
+                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">Support and Network Security</Badge>
                 </CardContent>
               </Card>
               <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
                 <CardHeader className="bg-muted/30">
-                  <CardTitle>Certifications Sécurité</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    En cours
+                    <Clock className="h-4 w-4 text-muted-foreground" />
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-4 flex flex-wrap gap-2">
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CompTIA Security+</Badge>
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CEH</Badge>
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">CISSP</Badge>
-                </CardContent>
-              </Card>
-              <Card className="overflow-hidden border-none shadow-md bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
-                <CardHeader className="bg-muted/30">
-                  <CardTitle>Certifications Cloud & Système</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-4 flex flex-wrap gap-2">
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">AWS Solutions Architect</Badge>
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">Microsoft MCSA</Badge>
-                  <Badge className="bg-primary/20 text-primary hover:bg-primary/30">VMware VCP</Badge>
+                  <Badge variant="outline" className="border-primary/30 text-primary">SAL1 (In progress...)</Badge>
                 </CardContent>
               </Card>
             </div>

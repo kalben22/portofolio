@@ -10,40 +10,40 @@ import SectionTitle from "@/components/ui-custom/section-title"
 // Données des compétitions
 const competitions = [
   {
-    name: "CTF CyberSecurity Challenge",
-    date: "Octobre 2023",
-    location: "Paris, France",
-    team: "SecureBytes",
-    placement: "2ème place",
+    name: "HackerLab 2025",
+    date: "2025",
+    location: "Benin",
+    team: "",
+    placement: "Finaliste",
     description:
-      "Compétition de type Capture The Flag axée sur la sécurité des applications web, le reverse engineering et la cryptographie.",
-    skills: ["Web Security", "Reverse Engineering", "Cryptography", "Forensics"],
+      "Compétition nationale de cybersécurité mettant à l'épreuve les compétences en sécurité offensive et défensive, forensique numérique et analyse de vulnérabilités.",
+    skills: ["CTF", "Forensics", "Network Security", "Web Security", "DFIR"],
     highlight:
-      "Notre équipe a résolu 90% des challenges de sécurité web, démontrant une expertise particulière dans ce domaine.",
+      "Qualification en finale démontrant une maîtrise solide des techniques d'analyse forensique et de détection des menaces.",
   },
   {
-    name: "Hackathon SecuriNet",
-    date: "Mai 2023",
-    location: "Lyon, France",
-    team: "NetDefenders",
-    placement: "1ère place",
+    name: "Huawei ICT Competition - Phase Afrique",
+    date: "2025",
+    location: "Afrique",
+    team: "",
+    placement: "Finaliste",
     description:
-      "Hackathon de 48 heures centré sur la détection et la réponse aux incidents de sécurité dans un environnement d'entreprise simulé.",
-    skills: ["Incident Response", "Network Security", "SIEM", "Threat Hunting"],
+      "Compétition internationale organisée par Huawei, couvrant les technologies réseau, cloud et sécurité à l'échelle du continent africain.",
+    skills: ["Networking", "Cloud Computing", "Security", "ICT Infrastructure"],
     highlight:
-      "Développement d'un outil automatisé de détection d'intrusion qui a permis d'identifier rapidement les menaces persistantes avancées.",
+      "Sélection parmi les meilleurs talents IT du continent, démontrant une expertise avancée en infrastructure réseau et sécurité.",
   },
   {
-    name: "European Cyber Week Challenge",
-    date: "Novembre 2022",
-    location: "Rennes, France",
-    team: "CyberShield",
-    placement: "Top 5",
+    name: "Hackathon Sèmè-City (SCOP)",
+    date: "2025",
+    location: "Sèmè-City, Benin",
+    team: "",
+    placement: "Vainqueur",
     description:
-      "Compétition européenne mettant l'accent sur la protection des infrastructures critiques et la réponse aux cyberattaques.",
-    skills: ["Critical Infrastructure", "Blue Team", "Red Team", "Threat Intelligence"],
+      "Hackathon organisé à la cité de l'innovation Sèmè-City, axé sur le développement de solutions technologiques innovantes.",
+    skills: ["Innovation", "Problem Solving", "Development", "Teamwork"],
     highlight:
-      "Reconnaissance spéciale pour notre stratégie de défense innovante contre les attaques de type ransomware.",
+      "Premier prix remporté grâce à une solution innovante, prouvant des capacités de résolution de problèmes et de travail en équipe sous pression.",
   },
 ]
 
@@ -83,7 +83,7 @@ export default function Competitions() {
                         <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mr-2">
                           {competition.placement}
                         </Badge>
-                        <span>Équipe: {competition.team}</span>
+                        {competition.team && <span>{"Équipe: "}{competition.team}</span>}
                       </CardDescription>
                     </div>
                     <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">

@@ -35,7 +35,7 @@ export default function Hero() {
                 animate={inView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                <span className="text-primary font-semibold">Bonjour, je suis</span>
+                <span className="text-primary font-semibold">{"Bonjour, je suis Bernard Houngbo"}</span>
               </motion.div>
 
               <motion.h1
@@ -46,11 +46,11 @@ export default function Hero() {
               >
                 <TypeAnimation
                   sequence={[
-                    "Administrateur Réseau",
+                    "Cybersecurity Analyst",
                     1000,
-                    "Administrateur Système",
+                    "DFIR Specialist",
                     1000,
-                    "Expert en Cybersécurité",
+                    "Network Security Expert",
                     1000,
                   ]}
                   wrapper="span"
@@ -65,8 +65,7 @@ export default function Hero() {
                 animate={inView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.6, duration: 0.5 }}
               >
-                Spécialiste en infrastructure IT avec expertise en sécurité réseau, administration système et
-                cybersécurité. Je conçois, implémente et sécurise des infrastructures robustes.
+                {"Analyste en cybersécurité proactif et méticuleux, spécialisé en Digital Forensics & Incident Response (DFIR) et sécurité réseau. Passionné par la détection des menaces, l'analyse forensique et la sécurisation des infrastructures d'entreprise."}
               </motion.p>
             </div>
 
@@ -92,11 +91,11 @@ export default function Hero() {
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 1, duration: 0.5 }}
             >
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.linkedin.com/in/bernard-houngbo" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://github.com/kalben22" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>

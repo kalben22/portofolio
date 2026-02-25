@@ -7,40 +7,29 @@ import ExperienceCard from "@/components/cards/experience-card"
 
 const experiences = [
   {
-    title: "Administrateur Sécurité Réseau",
-    company: "Entreprise XYZ",
-    period: "2020 - Présent",
+    title: "IT Support Specialist",
+    company: "African Education Innovation Group",
+    period: "2024 - Août 2025",
     description:
-      "Responsable de la sécurité de l'infrastructure réseau et de la mise en place des politiques de sécurité.",
+      "Support technique et gestion de l'infrastructure IT pour plus de 200 utilisateurs dans un environnement éducatif.",
     responsibilities: [
-      "Gestion des firewalls et systèmes de détection d'intrusion",
-      "Mise en place d'une architecture Zero Trust",
-      "Réalisation d'audits de sécurité et tests de pénétration",
-      "Gestion des incidents de sécurité",
+      "Support technique pour les utilisateurs, plus de 200 postes",
+      "Gestion des équipements IT (PCs, claviers, souris, serveurs, etc.)",
+      "Administration système et réseau",
+      "Gestion des incidents et escalade",
+      "Gestion des actifs IT",
     ],
   },
   {
-    title: "Administrateur Système & Réseau",
-    company: "Entreprise ABC",
-    period: "2017 - 2020",
-    description: "Administration et maintenance de l'infrastructure IT de l'entreprise.",
+    title: "Web Developer",
+    company: "Direction des Bourses et Aides Universitaires",
+    period: "Avril 2024",
+    description: "Développement d'une application web et mise en place de l'infrastructure réseau.",
     responsibilities: [
-      "Administration des serveurs Windows et Linux",
-      "Gestion de l'infrastructure réseau (Cisco)",
-      "Mise en place et maintenance des solutions de virtualisation",
-      "Support technique niveau 3",
-    ],
-  },
-  {
-    title: "Technicien Réseau",
-    company: "Entreprise DEF",
-    period: "2015 - 2017",
-    description: "Support technique et déploiement d'équipements réseau.",
-    responsibilities: [
-      "Installation et configuration des équipements réseau",
-      "Dépannage et résolution des problèmes réseau",
-      "Documentation des infrastructures",
-      "Support aux utilisateurs",
+      "Développement d'une application de gestion des étudiants béninois à l'étranger",
+      "Installation d'un firewall OPNSense",
+      "Déploiement d'un contrôleur de domaine sur le réseau",
+      "Mise en place d'un serveur de partage de fichiers",
     ],
   },
 ]
@@ -57,7 +46,7 @@ export default function Experience() {
       <div className="container px-4 md:px-6 relative z-10">
         <SectionTitle
           title="Expérience"
-          subtitle="Mon parcours professionnel en tant qu'administrateur réseau, système et sécurité"
+          subtitle="Mon parcours professionnel en cybersécurité et infrastructure IT"
           inView={inView}
         />
 
