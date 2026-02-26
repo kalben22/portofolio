@@ -71,7 +71,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-muted-foreground">bernard.houngbo@epitech.eu</p>
+                  <p className="text-muted-foreground">bernardhoungbo2021@gmail.com</p>
                 </div>
               </div>
 
@@ -82,16 +82,6 @@ export default function Contact() {
                 <div>
                   <h4 className="font-medium">Localisation</h4>
                   <p className="text-muted-foreground">Cotonou, Benin</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-medium">Téléphone</h4>
-                  <p className="text-muted-foreground">+229 0198705024</p>
                 </div>
               </div>
 
