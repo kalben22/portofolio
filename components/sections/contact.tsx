@@ -22,14 +22,14 @@ export default function Contact() {
     message: "",
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { id: any; value: any } }) => {
     setFormState({
       ...formState,
       [e.target.id]: e.target.value,
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault()
     // Logique d'envoi du formulaire
     console.log(formState)
